@@ -10,6 +10,11 @@ hsp = move * walksp;
 
 vsp = vsp + grv;
 
+if (place_meeting(x, y+1, Object4)&& (key_jump))
+{
+	vsp = -7;
+}
+
 if (place_meeting(x + hsp, y, Object4)){
 	while(!place_meeting(x + sign(hsp), y, Object4)){ x = x + sign(hsp);}
 	hsp = 0;
